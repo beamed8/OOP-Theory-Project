@@ -7,7 +7,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance { get; private set; } // ENCAPSULATION
+    // ENCAPSULATION
+    public static GameManager instance { get; private set; }
 
     public static event Action PlayerKilled;
 
@@ -32,7 +33,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void ChangeScene(string sceneName) // ABSTRACTION: using only one function for changing scenes
+    // ABSTRACTION: using only one function for changing scenes
+    public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
@@ -42,8 +44,6 @@ public class GameManager : MonoBehaviour
         Destroy(player);
         yield return new WaitForSeconds(0.5f);
         Instantiate(playerPrefab, spawnPosition.transform.position, Quaternion.identity);
-        // player.transform.position = spawnPosition.transform.position;
-        // player.GetComponent<Renderer>().material = playerMat;
         PlayerKilled?.Invoke();
     }
 

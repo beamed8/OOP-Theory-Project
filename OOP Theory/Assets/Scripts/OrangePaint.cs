@@ -7,7 +7,8 @@ public class OrangePaint : Paint
     public Material orangePaintMat;
     public GameObject orangeParticles;
 
-    public override void PaintObject(GameObject toPaint, Material paintMaterial) // POLYMORPHISM
+    // POLYMORPHISM
+    public override void PaintObject(GameObject toPaint, Material paintMaterial)
     {
         toPaint.GetComponent<Renderer>().material = paintMaterial;
         AddParticles(toPaint);
