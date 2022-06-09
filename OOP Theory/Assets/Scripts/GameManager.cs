@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public static event Action PlayerKilled;
 
     public GameObject playerPrefab;
-    public Material playerMat;
     public GameObject spawnPosition;
 
     public int score;
@@ -29,8 +28,6 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-
-        DontDestroyOnLoad(gameObject);
     }
 
     // ABSTRACTION: using only one function for changing scenes

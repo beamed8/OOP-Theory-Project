@@ -38,7 +38,6 @@ public class Trap : MonoBehaviour
             if (rend.sharedMaterial != other.gameObject.GetComponent<Renderer>().sharedMaterial)
             {
                 StartCoroutine(GameManager.instance.ResetPlayer(other.gameObject));
-                Debug.Log("asd");
             }
         }
     }

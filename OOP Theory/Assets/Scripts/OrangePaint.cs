@@ -7,7 +7,7 @@ public class OrangePaint : Paint
     public Material orangePaintMat;
     public GameObject orangeParticles;
 
-    // POLYMORPHISM
+    // POLYMORPHISM: override derived class' method to add another feature
     public override void PaintObject(GameObject toPaint, Material paintMaterial)
     {
         toPaint.GetComponent<Renderer>().material = paintMaterial;
