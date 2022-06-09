@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Paint : MonoBehaviour
 {
-    public void PaintObject(GameObject toPaint, Material paintMaterial)
+    public virtual void PaintObject(GameObject toPaint, Material paintMaterial)
     {
         toPaint.GetComponent<Renderer>().material = paintMaterial;
     }
